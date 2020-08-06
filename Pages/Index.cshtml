@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <br />
+    <p>Choose <b>Sign in</b> at the top of the page and sign in with your work or school account.</p>
+}

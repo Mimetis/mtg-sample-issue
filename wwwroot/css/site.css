@@ -1,0 +1,194 @@
+﻿body {
+    font-size: .850rem;
+}
+
+/*
+    Having a 100% height (minus top bar 48 px)
+*/
+[role=main] {
+    min-height: calc(100vh - 48px);
+    margin-left: 200px;
+}
+
+/*
+    Microsoft graph login
+*/
+mgt-login {
+    --font-size: 14px;
+    --font-weight: 600;
+    --height: '100%';
+    --color: white;
+    --color-hover: rgb(222, 226, 230);
+    --background-color: transparent;
+    --background-color--hover: #808080;
+    --popup-content-background-color: white;
+    --popup-command-font-size: 12px;
+    --popup-color: #201f1e;
+}
+
+
+mgt-people-picker {
+    --input-border: 1px #ced4da solid; /* sets all input area border */
+    border-radius: 0.25rem
+}
+
+/*
+    Disable terrible focus shadow (UGLY)
+
+*/
+.btn.focus{
+    outline:0;
+    box-shadow:none;
+}
+
+
+div.people-picker {
+    margin: 10px;
+    border-radius: 0.25rem !important;
+}
+
+.mgt {
+    margin-right: 10px;
+    width: 250px;
+    max-width: 250px;
+    text-align: right;
+}
+
+.search-bar {
+    max-width: 200vw !important;
+    width: 100vw !important;
+    text-align: left;
+}
+/*
+    Margin used form icons in the left menu
+*/
+.sidebar-sticky > ul > li > a > i {
+    margin-right: 10px;
+}
+
+/*
+    Creating a panel for any form needed
+*/
+.form-layout {
+    margin-top: 16px;
+    margin-bottom: 56px;
+    background-color: white;
+    width: 100%;
+    padding: 24px;
+    border-radius: 5px;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgb(222, 226, 230) !important;
+    border-image: initial !important;
+}
+
+
+/*
+ * Sidebar menu
+ */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    width: 200px;
+}
+
+
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 5rem;
+        width: 100vw;
+    }
+
+    .search-bar {
+        width: 100vw !important;
+        text-align: left;
+    }
+
+    [role=main] {
+        min-height: calc(100vh - 122px);
+        margin-left: 0px;
+    }
+
+    mgt-login {
+        --padding: 5px 2px 5px 2px
+    }
+
+    .mgt {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 0px;
+        width: 250px;
+        max-width: 250px;
+        text-align: left;
+    }
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+
+.sidebar .nav-link {
+    /*font-weight: 500;*/
+    color: #fcfcfc;
+}
+
+    .sidebar .nav-link.active {
+        color: #007bff;
+    }
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+}
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+    .form-control-dark:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+    }
